@@ -1,0 +1,14 @@
+# byte-compiled
+__pycache__
+
+# environment
+.venv/
+.env
+
+# OS files
+.DS_Store
+
+# data
+input/
+output/
+
