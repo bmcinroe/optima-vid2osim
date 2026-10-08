@@ -1,0 +1,35 @@
+[project]
+name = "vid2osim"
+version = "0.1.0"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "decord>=0.6.0",
+    "sam-3d-body[vitdet,sam3,moge]",
+    "torch",
+    "torchvision",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+override-dependencies = ["numpy>=2"]
+
+[tool.uv.sources]
+sam-3d-body = { git = "https://github.com/bmcinroe/sam-3d-body", branch = "main" }
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.uv.extra-build-dependencies]
+detectron2 = [{ requirement = "torch", match-runtime = true }]
+
+[[tool.uv.dependency-metadata]]
+name = "detectron2"
+version = "0.6"
+requires-dist = ["torch"]

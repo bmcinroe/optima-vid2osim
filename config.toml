@@ -1,0 +1,21 @@
+[paths]
+input_path = '/home/ben/optima-vid2osim/input'
+output_path = '/home/ben/optima-vid2osim/output'
+
+[seeds]
+cam_bcast = [
+    [693, 333],
+    [707, 355],
+    [678, 349],
+    [686, 373],
+    [691, 350],
+    [679, 387],
+    [693, 387],
+    [703, 406],
+    [681, 410],
+    [684, 429],
+    [707, 429],
+    [707, 448],
+    [685, 448],
+    [732, 372],
+]

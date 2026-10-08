@@ -16,20 +16,11 @@
 Library for markerless 3D kinematics estimation from diverse video sources, designed for low friction interfacing with [opensim-fitter](https://github.com/opensim-org/opensim-fitter).
 
 ## Installation
-_Full install isntructions coming soon!_
-### Requirements
-
-- Numpy
-- cv2
-- Pytorch
-- SAM3
-
-An editable install of sam-3d-body in the environment is also required, see the [instructions](https://github.com/facebookresearch/sam-3d-body/blob/main/INSTALL.md)
-
-### Install
-_Full install isntructions coming soon!_
+Install using `uv`:
 ```bash
 git clone https://github.com/bmcinroe/optima-vid2osim.git
+cd optima-vid2osim
+uv sync
 ```
 
 ## Usage
@@ -80,7 +71,7 @@ python main.py
 ```
 to generate 2D keypoints per video and the 3D pose reconstruction.
 
-Monocular use without calibration data is supported, but the outputs are not saved by default. To save the complete output including MHR mesh, 3D keypoints, etc., include or uncomment `write_results_to_npz(ROOT / "output" / f"{cam}_results.npz", results)` inside the inference loop. A future update will integrate more robust monocular support.
+To save the complete output including MHR mesh, 3D keypoints, etc., include or uncomment `write_results_to_npz(ROOT / "output" / f"{cam}_results.npz", results)` inside the inference loop. A future update will integrate more robust monocular support.
 
 ## In Progress
 
